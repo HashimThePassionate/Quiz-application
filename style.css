@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(202, 158, 251);
+    font-family: monospace;
+    font-size: 1rem;
+}
+
+.container {
+    position: relative;
+    background-color: rgb(255, 239, 209);
+    height: 300px;
+    width: 500px;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* align-items: start; */
+    box-shadow: 8px 5px 15px black;
+}
+
+ul {
+    list-style-type: none;
+}
+
+#heading {
+    color: blueviolet;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.label {
+    color: blueviolet;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+#btn {
+    background-color: blueviolet;
+    margin-top: 20px;
+    color: white;
+    padding: 5px;
+    border: 2px solid blueviolet;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease, transform 0.3s ease;
+}
+
+#btn:hover {
+    background-color: white;
+    color: blueviolet;
+    border: 2px solid blueviolet;
+    transform: scale(1.1);
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px blueviolet;
+    }
+
+    50% {
+        box-shadow: 0 0 20px blueviolet;
+    }
+
+    100% {
+        box-shadow: 0 0 5px blueviolet;
+    }
+}
+
+.btn:hover {
+    animation: glow 1s infinite alternate;
+}
+
+.last {
+    color: blueviolet;
+    font-size: 20px;
+}
+
+.last-btn {
+    background-color: blueviolet;
+    color: white;
+    padding: 10px 55px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease, transform 0.3s ease;
+}
+
+.last-btn:hover {
+    background-color: white;
+    color: blueviolet;
+    border: 2px solid blueviolet;
+    transform: scale(1.1);
+}
+
+.last-btn:hover {
+    animation: glow 1s infinite alternate;
+}
+
+/* ------------------------------------------------------- */
+
+
+.dialog-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.dialog-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 300px;
+    width: 100%;
+}
+
+.dialog-box h3 {
+    margin: 0 0 10px;
+    font-size: 24px;
+    color: #333;
+}
+
+.dialog-box p {
+    margin: 0 0 20px;
+    font-size: 16px;
+    color: #666;
+}
+
+.dialog-box button {
+    background-color: blueviolet;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.dialog-box button:hover {
+    background-color: #5a00b3;
+}
+
+
+/* ---------------------------------------------------------- */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin: 10px 0 5px;
+    font-size: 16px;
+    color: #333;
+    text-align: start;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.copy {
+    position: absolute;
+    bottom: 2px;
+    left: 160px;
+    color: blueviolet;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Times New Roman', Times, serif;
+    /* background-color: #af6bf2; */
+    padding: 5px;
+    box-shadow: 0 0 10px rgba(209, 205, 205, 0.1);
+    transition: background-color 0.3s;
+    border: 2px solid blueviolet;
+}
+
+.copy:hover {
+    animation: glow 1s infinite alternate;
+    background-color: white;
+    color: blueviolet;
+    cursor: pointer;
+    border: 2px solid blueviolet;
+    /* transform: scale(1.1); */
+}
