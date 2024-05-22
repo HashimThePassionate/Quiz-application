@@ -1,6 +1,6 @@
 # Quiz-application
 This is a simple quiz application built using HTML, CSS, and JavaScript. It allows users to answer multiple-choice questions and provides immediate feedback on their answers.
-
+[Quiz Application](https://hashimthepassionate.github.io/Quiz-application/)
 ## Contents
 
 - [HTML](#html)
