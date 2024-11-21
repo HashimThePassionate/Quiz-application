@@ -1,113 +1,105 @@
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Body Styling */
 body {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(202, 158, 251);
-    font-family: monospace;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Container Styling */
+.container {
+    position: relative;
+    background-color: #fff;
+    height: auto;
+    width: 90%;
+    max-width: 600px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+#heading {
+    color: #6a11cb;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Labels */
+.label {
+    color: #444;
+    font-weight: 600;
     font-size: 1rem;
 }
 
-.container {
-    position: relative;
-    background-color: rgb(255, 239, 209);
-    height: 300px;
-    width: 500px;
-    padding: 40px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    /* align-items: start; */
-    box-shadow: 8px 5px 15px black;
-}
-
-ul {
-    list-style-type: none;
-}
-
-#heading {
-    color: blueviolet;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-}
-
-.label {
-    color: blueviolet;
-    font-weight: 600;
-    font-size: 0.9rem;
-}
-
-#btn {
-    background-color: blueviolet;
-    margin-top: 20px;
-    color: white;
-    padding: 5px;
-    border: 2px solid blueviolet;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease, transform 0.3s ease;
-}
-
-#btn:hover {
-    background-color: white;
-    color: blueviolet;
-    border: 2px solid blueviolet;
-    transform: scale(1.1);
-}
-
-@keyframes glow {
-    0% {
-        box-shadow: 0 0 5px blueviolet;
-    }
-
-    50% {
-        box-shadow: 0 0 20px blueviolet;
-    }
-
-    100% {
-        box-shadow: 0 0 5px blueviolet;
-    }
-}
-
-.btn:hover {
-    animation: glow 1s infinite alternate;
-}
-
-.last {
-    color: blueviolet;
-    font-size: 20px;
-}
-
+/* Buttons */
+#btn,
 .last-btn {
-    background-color: blueviolet;
-    color: white;
-    padding: 10px 55px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    padding: 10px 20px;
     border: none;
     cursor: pointer;
-    margin-top: 20px;
-    border-radius: 30px;
-    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease, transform 0.3s ease;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    text-transform: uppercase;
 }
 
+#btn:hover,
 .last-btn:hover {
-    background-color: white;
-    color: blueviolet;
-    border: 2px solid blueviolet;
-    transform: scale(1.1);
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(106, 17, 203, 0.4);
 }
 
-.last-btn:hover {
-    animation: glow 1s infinite alternate;
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-/* ------------------------------------------------------- */
+.contact-form label {
+    font-size: 1rem;
+    color: #6a11cb;
+    font-weight: bold;
+}
 
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
 
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #6a11cb;
+    box-shadow: 0 0 8px rgba(106, 17, 203, 0.2);
+}
+
+/* Dialog Box */
 .dialog-overlay {
     display: none;
     position: fixed;
@@ -115,7 +107,7 @@ ul {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
     justify-content: center;
     align-items: center;
     z-index: 1000;
@@ -123,89 +115,38 @@ ul {
 
 .dialog-box {
     background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     text-align: center;
-    max-width: 300px;
-    width: 100%;
+    width: 90%;
+    max-width: 400px;
 }
 
 .dialog-box h3 {
-    margin: 0 0 10px;
-    font-size: 24px;
-    color: #333;
+    font-size: 1.5rem;
+    color: #6a11cb;
+    margin-bottom: 15px;
 }
 
 .dialog-box p {
-    margin: 0 0 20px;
-    font-size: 16px;
+    font-size: 1rem;
     color: #666;
+    margin-bottom: 20px;
 }
 
 .dialog-box button {
-    background-color: blueviolet;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 1rem;
+    color: #fff;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease;
 }
 
 .dialog-box button:hover {
-    background-color: #5a00b3;
-}
-
-
-/* ---------------------------------------------------------- */
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-}
-
-.contact-form label {
-    margin: 10px 0 5px;
-    font-size: 16px;
-    color: #333;
-    text-align: start;
-}
-
-.contact-form input,
-.contact-form textarea {
-    padding: 10px;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.contact-form textarea {
-    resize: vertical;
-}
-
-.copy {
-    position: absolute;
-    bottom: 2px;
-    left: 160px;
-    color: blueviolet;
-    font-size: 20px;
-    font-weight: 600;
-    font-family: 'Times New Roman', Times, serif;
-    /* background-color: #af6bf2; */
-    padding: 5px;
-    box-shadow: 0 0 10px rgba(209, 205, 205, 0.1);
-    transition: background-color 0.3s;
-    border: 2px solid blueviolet;
-}
-
-.copy:hover {
-    animation: glow 1s infinite alternate;
-    background-color: white;
-    color: blueviolet;
-    cursor: pointer;
-    border: 2px solid blueviolet;
-    /* transform: scale(1.1); */
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+    transform: scale(1.05);
 }
