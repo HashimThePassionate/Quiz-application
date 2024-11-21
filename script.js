@@ -231,7 +231,7 @@ button.addEventListener('click', () => {
         else {
             quiz.innerHTML = `
                 <h2 class="heading">Your Answer Score is ${score}/${quizApp.length*10}</h2>
-                <button class="last-btn" onclick="history.go(0)">Start Again</button>
+                <button style=" background: linear-gradient(135deg, #4b6cb7, #182848); color: white; border: 2px solid white; padding: 10px 20px; cursor: pointer; border-radius: 10px; transition: 0.3s ease-out; font-size: 1rem; margin-top: 10px; text-transform: uppercase;" onclick="history.go(0)">Start Again</button>
             `;
         }
     }
