@@ -40,7 +40,9 @@ body {
     text-align: center;
     margin-bottom: 15px;
 }
-
+ul {
+    list-style-type:none;
+}
 /* Labels */
 .label {
     color: #444;
