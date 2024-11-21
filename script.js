@@ -8,10 +8,12 @@ let c = id('c_id');
 let d = id('d_id');
 let button = id('btn');
 let option = query('.option');
-// Popup vaiables
+
+
+// Popup variables
 let popup = id('popup');
-let popupMessage = id('popup-message');
 let popupCloseBtn = id('popup-close-btn');
+
 // Above
 // ignore this code
 
@@ -209,6 +211,13 @@ let quizLoad = () => {
 
 quizLoad();
 
+
+// Close the popup when the close button is clicked
+popupCloseBtn.addEventListener('click', () => {
+    popup.style.display = 'none';
+  });
+
+
 button.addEventListener('click', () => {
     let c = check();
     if (c) {
@@ -227,7 +236,7 @@ button.addEventListener('click', () => {
         }
     }
     else {
-        alert('Please select an option');
+        popup.style.display = 'flex';
     }
 
 });

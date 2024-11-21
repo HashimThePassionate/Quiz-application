@@ -62,3 +62,62 @@ ul{
     box-shadow: 0 0 20px white;
     background: linear-gradient(135deg,#182848,#4b6cb7);
 }
+
+
+/* Popup container */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Popup content */
+  .popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Popup heading */
+  .popup-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #283b68; /* Match the theme color */
+  }
+  
+  /* Popup message */
+  .popup-content p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #283b68; /* Match the theme color */
+  }
+  
+  /* Popup close button */
+  #popup-close-btn {
+    background: linear-gradient(135deg, #4b6cb7, #182848);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: all 0.3s ease-out;
+  }
+  
+  #popup-close-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px white;
+    background: linear-gradient(135deg, #182848, #4b6cb7);
+  }
