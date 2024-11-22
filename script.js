@@ -49,135 +49,6 @@ let quizApp = [
     d: "System Query Language",
     correct: "a",
   },
-  {
-    question: "Which one is used to create a hyperlink in HTML?",
-    a: "<img>",
-    b: "<a>",
-    c: "<link>",
-    d: "<href>",
-    correct: "b",
-  },
-  {
-    question: "What does DOM stand for?",
-    a: "Document Object Model",
-    b: "Data Object Management",
-    c: "Document Operation Management",
-    d: "Data Oriented Model",
-    correct: "a",
-  },
-  {
-    question: "What is the correct syntax to include JavaScript in HTML?",
-    a: "<script>",
-    b: "<javascript>",
-    c: "<js>",
-    d: "<code>",
-    correct: "a",
-  },
-  {
-    question: "Which of the following is a JavaScript framework?",
-    a: "React",
-    b: "Laravel",
-    c: "Django",
-    d: "Flask",
-    correct: "a",
-  },
-  {
-    question: "What is the purpose of the <head> tag in HTML?",
-    a: "To define the body content",
-    b: "To include metadata and links",
-    c: "To create a header section",
-    d: "To display text",
-    correct: "b",
-  },
-  {
-    question:
-      "Which method is used to add an element at the end of an array in JavaScript?",
-    a: ".push()",
-    b: ".pop()",
-    c: ".shift()",
-    d: ".unshift()",
-    correct: "a",
-  },
-  {
-    question: "Which of the following is a valid JavaScript data type?",
-    a: "Number",
-    b: "String",
-    c: "Boolean",
-    d: "All of the above",
-    correct: "d",
-  },
-  {
-    question: "Which company developed JavaScript?",
-    a: "Netscape",
-    b: "Microsoft",
-    c: "Sun Microsystems",
-    d: "Oracle",
-    correct: "a",
-  },
-  {
-    question: 'What is the output of 2 + "2" in JavaScript?',
-    a: "4",
-    b: "22",
-    c: "NaN",
-    d: "Error",
-    correct: "b",
-  },
-  {
-    question: "What is the default file extension for a JavaScript file?",
-    a: ".js",
-    b: ".javascript",
-    c: ".script",
-    d: ".jvs",
-    correct: "a",
-  },
-  {
-    question: "Which symbol is used to denote an ID in CSS?",
-    a: "#",
-    b: ".",
-    c: "*",
-    d: "@",
-    correct: "a",
-  },
-  {
-    question: "Which CSS property is used to change text color?",
-    a: "font-color",
-    b: "text-color",
-    c: "color",
-    d: "background-color",
-    correct: "c",
-  },
-  {
-    question: "Which HTML tag is used to insert an image?",
-    a: "<img>",
-    b: "<image>",
-    c: "<picture>",
-    d: "<photo>",
-    correct: "a",
-  },
-  {
-    question: "Which of the following is not a NoSQL database?",
-    a: "MongoDB",
-    b: "Redis",
-    c: "PostgreSQL",
-    d: "Cassandra",
-    correct: "c",
-  },
-  {
-    question: "What is the purpose of a constructor in JavaScript classes?",
-    a: "To initialize properties of an object",
-    b: "To create functions",
-    c: "To return a value",
-    d: "To destroy objects",
-    correct: "a",
-  },
-  {
-    question: "What is the correct syntax for a function in JavaScript?",
-    a: "function = myFunction()",
-    b: "function myFunction()",
-    c: "myFunction function()",
-    d: "function:myFunction()",
-    correct: "b",
-  },
 ];
 
 let clear = () => {
@@ -220,16 +91,14 @@ button.addEventListener("click", () => {
   let c = check();
   if (c) {
     if (c === quizApp[initialStart].correct) {
-      score = score + 10;
+      score++;
     }
     initialStart++;
     if (initialStart < quizApp.length) {
       quizLoad();
     } else {
       quiz.innerHTML = `
-                <h2 class="heading">Your Answer Score is ${score}/${
-        quizApp.length * 20
-      }</h2>
+                <h2 class="heading">Your Answer Score is ${score}/${quizApp.length}</h2>
                 <button style=" background: linear-gradient(135deg, #4b6cb7, #182848); color: white; border: 2px solid white; padding: 10px 20px; cursor: pointer; border-radius: 10px; transition: 0.3s ease-out; font-size: 1rem; margin-top: 10px; text-transform: uppercase;" onclick="history.go(0)">Start Again</button>
             `;
     }
