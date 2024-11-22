@@ -119,6 +119,7 @@ input[type="radio"]:hover {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     display: none; /* Hidden by default */
+    backdrop-filter: blur(5px);
     justify-content: center;
     align-items: center;
     z-index: 1000;
